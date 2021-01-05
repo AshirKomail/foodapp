@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/main.dart';
-import 'main.dart';
-import 'package:foodapp/main.dart';
+import 'package:foodapp/account.dart';
+import 'package:foodapp/homepage.dart';
+import 'package:foodapp/offers.dart';
+import 'package:foodapp/categories.dart';
 
 
 class bottomnavigationbar extends StatefulWidget {
@@ -13,7 +14,10 @@ class _bottomnavigationbarState extends State<bottomnavigationbar> {
   int _currentindex = 0;
 
   final List<Widget> _children= [
-
+    homepage(),
+    categories(),
+    offers(),
+    account(),
   ];
 
   @override
@@ -44,7 +48,7 @@ class _bottomnavigationbarState extends State<bottomnavigationbar> {
               color: Colors.grey,
             ),
             title: Text(
-              'View',
+              'Categories',
               style: TextStyle(
                 color: Colors.grey,
                 fontFamily: 'Sniglet',
@@ -70,7 +74,7 @@ class _bottomnavigationbarState extends State<bottomnavigationbar> {
               Icons.person,
             color: Colors.grey,
             ),
-            title: Text('Accounts',
+            title: Text('Account',
               style: TextStyle(
                 color: Colors.grey,
                 fontFamily: 'Sniglet',
